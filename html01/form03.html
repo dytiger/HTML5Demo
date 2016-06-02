@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form 03</title>
+</head>
+<body>
+    <form action="table.html" method="post">
+        <div>
+            <label>简历：</label>
+            <textarea name="tt" rows="10" cols="80">ABCDEFG</textarea>
+        </div>
+        <div>
+            <label>籍贯：</label>
+            <select id="jg" name="jg">
+                <option value="1">北京</option>
+                <option value="2" selected>上海</option>
+                <option value="3">天津</option>
+                <option value="4">重庆</option>
+            </select>
+        </div>
+        <div>
+            <label>籍贯：</label>
+            <select id="jg2" name="jg">
+                <optgroup label="直辖市">
+                    <option value="1">北京</option>
+                    <option value="2" selected>上海</option>
+                    <option value="3">天津</option>
+                    <option value="4">重庆</option>
+                </optgroup>
+                <optgroup label="省份">
+                    <option value="5">河北</option>
+                    <option value="6">河南</option>
+                    <option value="7">山东</option>
+                    <option value="8">山西</option>
+                </optgroup>
+            </select>
+        </div>
+        <div>
+            <label>籍贯：</label>
+            <select id="jg3" name="jg" multiple>
+                <option value="1">北京</option>
+                <option value="2" selected>上海</option>
+                <option value="3">天津</option>
+                <option value="4">重庆</option>
+            </select>
+        </div>
+        <div>
+            <label>籍贯：</label>
+            <input id="jg4" name="jg" list="jg-data" />
+        </div>
+    </form>
+
+    <datalist id="jg-data">
+        <option value="北京" />
+        <option value="上海" />
+        <option value="天津" />
+        <option value="重庆" />
+        <option value="河北" />
+        <option value="河南" />
+        <option value="山东" />
+        <option value="山西" />
+    </datalist>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Form 01</title>
+</head>
+<body>
+    <form name="myform" action="table.html" method="get" target="_blank" enctype="application/x-www-form-urlencoded">
+        <div>
+            <label for="xm">姓名：</label><input id="xm" name="xm" value="Tom" type="text" autocomplete="on" autofocus minlength="3" maxlength="6" required size="100" placeholder="姓名" readonly disabled />
+        </div>
+        <div>
+            <label for="pwd">密码：</label><input id="pwd" name="pwd" type="password" />
+        </div>
+        <div>
+            <label for="photo">照片：</label><input id="photo" name="photo" type="file" accept="image/gif,image/png" />
+        </div>
+        <div>
+            <label>性别：</label>
+            <!-- 一组单选控件应该有一致的name属性取值 -->
+            <input id="gender-m" name="gender" value="m" type="radio" /><label>男</label>
+            <input id="gender-f" name="gender" value="f" type="radio" /><label>女</label>
+            <input id="gender-u" name="gender" value="u" type="radio" checked /><label>保密</label>
+        </div>
+        <div>
+            <label>爱好：</label>
+            <input id="ah-1" name="ah" value="1" type="checkbox" checked /><label>电玩</label>
+            <input id="ah-2" name="ah" value="2" type="checkbox" checked /><label>文学</label>
+            <input id="ah-3" name="ah" value="3" type="checkbox" /><label>体育</label>
+            <input id="ah-4" name="ah" value="4" type="checkbox" /><label>音乐</label>
+            <input id="ah-5" name="ah" value="5" type="checkbox" /><label>睡觉</label>
+        </div>
+        <input id="miyao" name="miyao" value="10" type="hidden" />
+        <input type="submit" value="提交" /><input type="reset" value="重置" /><input type="button" value="按钮" /><input type="image" src="https://avatars2.githubusercontent.com/u/11476027?v=3&s=40" />
+    </form>
+</body>
+</html>
