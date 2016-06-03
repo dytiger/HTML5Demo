@@ -1,0 +1,7 @@
+/* 以下一行语句用于设置本css文件的字符集 */
+@charset "UTF-8";
+
+h1{
+    color: green;
+    font-size: 35px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        p{
+            width: 300px;
+            height:300px;
+            border: 1px solid black;
+        }
+        #p1{
+            background-color: #ccc;
+        }
+
+        #p2{
+            background-color: #c00;
+            background-image: url(images/bg.png);
+        }
+        #p3{
+            background-image: url(images/bg.png);
+            background-repeat: repeat-x;
+        }
+        #p4{
+            background-image: url(images/bg.png);
+            background-repeat: repeat-y;
+        }
+        #p5{
+            background-image: url(images/bg.png);
+            background-repeat: no-repeat;
+        }
+        #p6{
+            background-image: url(images/bg.png);
+            background-repeat: space;
+        }
+
+        #p7{
+            background-image: url(images/bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #p8{
+            background-image: url(images/bg.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        #p9{
+            background-image: url(images/bg.png);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: center;
+        }
+        #p10{
+            background-image: url(images/bg.png);
+            background-clip: content-box;
+        }
+        #p11{
+            background-image: url(images/bg.png);
+            background-clip: padding-box;
+        }
+        #p12{
+            background-image: url(images/bg.png);
+            background-clip: border-box;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <p id="p6"></p>
+    <p id="p7"></p>
+    <p id="p8"></p>
+    <p id="p9"></p>
+    <p id="p10" style="border:10px double black;"></p>
+    <p id="p11" style="border:10px double black;padding:10px;"></p>
+    <p id="p12" style="border:10px double black;"></p>
+</body>
+</html>

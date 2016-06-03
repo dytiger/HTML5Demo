@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--文档内嵌样式和外部引用样式文件的优先级比浏览器默认样式和用户自定义样式要高 -->
+    <!--文档内嵌样式和外部引用样式文件的优先级比元素内嵌样式要低 -->
+    <!--文档内嵌样式和外部引用样式文件哪个在后边，哪个的优先级更高 -->
+    <style>
+        h1{
+            font-size: 5em;
+            color: red;
+        }
+    </style>
+    <link href="css/mycss.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 style="font-size: 3.5em;color:grey;">标题一</h1>
+</body>
+</html>

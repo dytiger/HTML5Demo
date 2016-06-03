@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>边框 03</title>
+    <style>
+        p{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            /*
+	        阴影的水平偏移量：取正值向右偏移，取负值向左偏移
+	        阴影的垂直偏移量：取正值向下偏移，取负值向上偏移
+	        模糊量：默认值是0，取值越大，越模糊
+	        阴影的延伸半径：正值是向各方向扩大，负值是向反方向缩小
+	        阴影颜色
+	        可在最后加上inset，表示阴影为内部阴影
+            */
+            box-shadow: 5px 4px 10px 2px #ccc;
+        }
+        #p1{
+            border-radius: 20px;
+        }
+        #p2{
+            border-radius: 20px/10px;
+        }
+        #p3{
+            border-radius: 30px 10px;
+        }
+        #p4{
+            border-radius: 30px 20px 10px 5px;
+        }
+        #p5{
+            border-radius: 30px 20px/10px 5px;
+        }
+        #p6{
+            border-radius: 30px 20px 10px 5px/5px 10px 20px 30px;
+        }
+    </style>
+</head>
+<body>
+    <p id="p1">a</p>
+    <p id="p2">b</p>
+    <p id="p3">c</p>
+    <p id="p4">d</p>
+    <p id="p5">e</p>
+    <p id="p6">f</p>
+</body>
+</html>
