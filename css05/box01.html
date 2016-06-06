@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <style type="text/css">
+        body{
+            padding: 0px;
+        }
+        .outer{
+            width: 200px;
+            height: 200px;
+            border: 5px solid black;
+            padding: 10px;
+            /* 从top边开始以顺时针方向定义：上右下左 */
+            /* padding: 5px 10px 15px 20px; */
+            /* 上下 左右 */
+            /*padding: 5px 20px;*/
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .inner{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+            padding: 5px;
+            margin: 5px;
+            /* 从top边开始以顺时针方向定义：上右下左 */
+            /* margin: 5px 10px 0px 20px; */
+            /* 上下 左右 */
+            /*margin: 10px 20px;*/
+        }
+    </style>
+</head>
+<body>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+<div class="outer">
+    <div class="inner"></div>
+</div>
+</body>
+</html>
