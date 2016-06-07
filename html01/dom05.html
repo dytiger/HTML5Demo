@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form action="http://www.baidu.com" method="post" onsubmit="return valdateForm();">
+        <input id="xm" name="xm" placeholder="姓名" />
+        <button>OK</button>
+    </form>
+    <script>
+        function valdateForm() {
+            var xmInput = document.getElementById('xm');
+            var xm = xmInput.value.trim();
+            if(xm==''){
+                alert('请输入姓名！');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>
