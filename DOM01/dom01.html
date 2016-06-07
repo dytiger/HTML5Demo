@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="first-p" title="first p">首行</p>
+    <p class="chinese">一</p>
+    <p class="chinese">二</p>
+    <p class="chinese">三</p>
+    <p class="num">1</p>
+    <p class="num">2</p>
+    <p class="num">3</p>
+    <div class="num d">div</div>
+
+    <script>
+        // document.getElementById(str)的作用就是获得当前HTML文档中id属性值是str的那个元素对象
+        var firstP = document.getElementById('first-p');
+        // 通过typeof可以得到一个变量引用数据的类型
+        console.log(typeof firstP);
+        // element.getAttribute(str)方法可以读取某个元素对象的某个str属性，这是DOM的标准用法
+        console.log(firstP.getAttribute('title'));
+        // element.attr方式可以读取element元素的attr属性值，这是HTML文档中的特有用法
+        console.log(firstP.title);
+        // element.setAttribute(attrName,newValue);可以把element元素的某个属性值改变为新的值
+        firstP.setAttribute('title','new value');
+        console.log(firstP.getAttribute('title'));
+        firstP.title = 'new new value';
+        console.log(firstP.title);
+
+        // document.getElementsByTagName(tagName)得到当前文档中所有标签名称是tagName的元素对象组成的一个对象数组
+        var pArr1 = document.getElementsByTagName('p');
+        console.log('文档中有'+pArr1.length+'个p元素');
+        for(var i = 0;i<pArr1.length;i++){
+            console.log(pArr1[i].innerHTML);
+        }
+
+        // document.getElementsByClassName(className)得到当前文档中所有class属性取值中包含className的元素对象组成的一个对象数组
+        var numClassPArr = document.getElementsByClassName('num');
+        console.log('文档中有'+numClassPArr.length+'个class="num"的元素');
+        for(var i = 0;i<numClassPArr.length;i++){
+            console.log(numClassPArr[i].innerHTML);
+        }
+
+        // document.querySelector(selector)通过CSS选择器的语法来得到文档中的第一个符合的元素对象
+        var firstP = document.querySelector('p');
+        console.log(firstP.title);
+        firstP = document.querySelector('.chinese');
+        // 是取得某元素文本内容的HTML标准方式
+        console.log(firstP.innerHTML);
+        // 是取得某元素文本内容的DOM标准方式
+        console.log(firstP.firstChild.nodeValue);
+
+        // document.querySelectorAll(selector)通过CSS选择器的语法来得到文档中所有符合的元素组成的一个数组
+        /*var numArr = document.querySelectorAll('.num');
+        console.log('文档中有'+numArr.length+'个class="num"的元素');
+        for(var i = 0;i<numArr.length;i++){
+            console.log(numArr[i].innerHTML);
+        }*/
+    </script>
+</body>
+</html>

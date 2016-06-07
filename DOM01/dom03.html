@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="d">一<p>1</p><p>2</p><p>3</p>二</div>
+    <script>
+        var divEle = document.getElementById('d');
+        // 得到某个元素中的第一个节点
+        console.log(divEle.firstChild);// "一"
+        // 得到某个元素中的第一个元素节点
+        console.log(divEle.firstElementChild);// 第一个p元素
+        // 得到某个元素中的最后一个节点
+        console.log(divEle.lastChild);// "二"
+        // 得到某个元素中的最后一个元素节点
+        console.log(divEle.lastElementChild);// 最后一个p元素
+    </script>
+</body>
+</html>

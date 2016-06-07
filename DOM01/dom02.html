@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<article id="wz">
+    <h1>标题</h1>
+    <section>
+        <p>简介</p>
+    </section>
+    <section><p>正文</p></section>
+</article>
+<script>
+    var wzEle = document.getElementById('wz');
+    // childNodes属性可以得到某个元素内部的所有子节点，不包含后代节点
+    var eleArr = wzEle.childNodes;
+    console.log('article元素中包含了'+eleArr.length+'个子元素。');
+    for(var i = 0;i<eleArr.length;i++){
+        // nodeType属性表示节点的类型，有12种，我们关心前三种
+        // nodeType=1：元素节点
+        // nodeType=2：属性节点
+        // nodeType=3：文本节点
+        if(eleArr[i].nodeType==1){
+            // tagName是元素节点的属性，表示元素的标签名称，返回的名称都是大写字母
+            console.log(eleArr[i].tagName);
+        }else if(eleArr[i].nodeType==3){
+            // nodeValue得到某个节点的内容值
+            console.log(eleArr[i].nodeValue);
+        }
+    }
+    console.log(wzEle.childElementCount);
+</script>
+</body>
+</html>
