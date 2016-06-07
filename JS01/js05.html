@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变量作用域</title>
+</head>
+<body>
+<script>
+    // 直接声明在文档中的变量被称为全局变量
+    // 全局变量可以在当前文档中的任意地方访问
+    var b = 20;
+    function fun1() {
+        // 定义在某个语句块中的变量被称为局部变量，只有在定义它的语句块和子语句块中才可以被访问
+        var a = 10;
+        // alert(a);
+        // 在某个语句块中没有使用var声明的变量被称为隐式变量
+        // 应该禁止使用此类变量
+        c = 30;
+    }
+
+    function fun2() {
+        //  alert(a);
+        alert(c);
+    }
+
+    fun2();
+</script>
+</body>
+</html>

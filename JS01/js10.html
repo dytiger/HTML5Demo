@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For遍历数组元素</title>
+</head>
+<body>
+<script>
+    // 通过for对数组元素进行遍历
+    var arr = [1, 2, 3, 4, 5];
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * 5;
+    }
+    console.log(arr);
+
+    // 通过for-in进行对象属性的遍历
+    var obj = {name: 'Tom', age: 28, salary: 8000};
+    for (var key in obj) {
+        console.log(key + ":" + obj[key]);
+    }
+</script>
+</body>
+</html>

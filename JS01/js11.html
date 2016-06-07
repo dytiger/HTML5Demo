@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Break和Continue</title>
+</head>
+<body>
+    <script>
+        // 计算1到10之间所有偶数的和
+        function fun1() {
+            var sum = 0;
+            for(var i = 1;i<=10;i++){
+                if(i%2==0){
+                    // 当循环体执行到continue语句时会结束当前循环，开始下次循环
+                    continue;
+                }
+                sum = sum + i;
+            }
+            alert(sum);
+        }
+        fun1();
+
+        // 把一个数字数组的每个元素累加起来，但当遇到负数时不再累加后边的数字，直接结束
+        function fun2() {
+            var arr = [1,2,-3,4,5];
+            var sum = 0;
+            for(var i = 0;i<arr.length;i++){
+                if(arr[i]<0){
+                    // 如果执行break语句，则直接中断循环的执行
+                    break;
+                }
+                sum = sum + arr[i];
+            }
+            alert(sum);
+        }
+        fun2();
+    </script>
+</body>
+</html>

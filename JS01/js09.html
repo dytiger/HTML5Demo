@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>For</title>
+</head>
+<body>
+<script>
+    function addOneToTen() {
+        var sum = 0;
+        // for(计数器的声明和初始化;进入循环体的条件;改变判断条件需要的值){循环体}
+        for (var i = 1; i <= 10; i++) {
+            sum = sum + i;
+        }
+        alert(sum);
+    }
+
+    addOneToTen();
+    function addOneToTen2() {
+        var sum = 0;
+        for (var i = 1, j = 10; i < j; i++, j--) {
+            sum = sum + i + j;
+        }
+        alert(sum);
+    }
+    addOneToTen2();
+</script>
+</body>
+</html>

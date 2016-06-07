@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function</title>
+</head>
+<body>
+<script>
+    function helloWorld() {
+        alert('Hello World!');
+    }
+    // 在函数中定义的逻辑只有当函数被调用时才可以执行
+    helloWorld();
+
+    function sayHello(xm) {
+        alert('Hello ' + xm + '!');
+    }
+    sayHello('张辽');
+    sayHello('Tom');
+
+    function add(x, y) {
+        return x + y;
+    }
+    alert('计算结果：' + add(10, 15));
+
+    // 因为在JS中，函数也是一种数据类型，所以可以把函数赋值给一个变量
+    // 可以通过这种变量加上参数列表的形式进行函数的调用
+    var mul = function(x,y) {
+        return x*y;
+    };
+    alert(mul(3,4));
+
+    var jia = add;
+    alert('计算结果：' + jia(100, 15));
+</script>
+</body>
+</html>

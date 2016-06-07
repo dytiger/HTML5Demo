@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if</title>
+</head>
+<body>
+<script>
+    function if1() {
+        // if语句块的语法：if(条件逻辑表达式){分支体}
+        var w = '雨';
+        if (w == '晴') {
+            alert('去郊游。');
+        }
+        alert('睡觉');
+    }
+    //        if1();
+
+    function if2() {
+        // if-else语句块的语法：if(条件逻辑表达式){分支体}else{分支体}
+        var w = '晴';
+        if (w == '晴') {
+            alert('去郊游。');
+        } else {
+            alert('看书。');
+        }
+        alert('睡觉');
+    }
+    //        if2();
+
+    function if3() {
+        // if-else if-else语句块的语法：if(条件逻辑表达式){分支体}else if(条件){分支体}else if(条件){分支体}...else{}
+        var w = '未知';
+        if(w=='晴'){
+            alert('去郊游。');
+        }else if(w=='雨'){
+            alert('去看书。');
+        }else if(w=='雪'){
+            alert('去打雪仗。');
+        }else{
+            alert('发呆。');
+        }
+        alert('睡觉');
+    }
+    if3();
+</script>
+</body>
+</html>

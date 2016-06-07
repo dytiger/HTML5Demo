@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do-While循环</title>
+</head>
+<body>
+    <script>
+        function addOneToTen() {
+            var i = 1;// 计数器
+            var sum = 0;// 最终的和
+            // do-while循环会先执行一次循环体，再进行条件判断，所以do-while的循环体执行1到多次
+            // while循环会先进行条件判断，再决定是否执行循环体，所以while的循环体执行次数是0到多次
+            do{
+                // 循环体，进行累加
+                sum = sum + i;
+                i++;
+            }while(i<=100);
+            alert(sum);
+        }
+        addOneToTen();
+    </script>
+</body>
+</html>
