@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+body{
+    background: #eee;
+}
+
+header,footer{
+    width: 100%;
+    left: 0;
+    position: fixed;
+}
+
+header{
+    top:0;
+    font:bold 2em 微软雅黑;
+    color: #ccc;
+    background: #333;
+    line-height: 2em;
+    padding: 0 10%;
+    box-shadow: 0px 1px 1px 1px #999;
+}
+
+footer{
+    bottom:0;
+    font:1.1em 方正姚体;
+    color:#777;
+    background: #ddd;
+    text-align: center;
+    box-shadow: 0px -1px 1px 1px #ccc;
+    line-height: 2em;
+}
+
+#main{
+    margin: 5em 10%;
+    text-align: center;
+}
+
+nav{
+    float: left;
+    width: 10%;
+}
+
+li{
+    list-style: none;
+    font: 1.3em 方正姚体;
+    padding: 5px 2px;
+}
+
+a:link{
+    text-decoration: none;
+    text-shadow: 2px 2px 3px gray;
+    color:#333;
+}
+
+a:hover{
+    font-weight: bold;
+    font-size: 1.1em;
+    color:#e00;
+    text-shadow: 0px 0px 0px white;
+}
+
+.photo-wrap{
+    float: right;
+    width: 90%;
+}
+
+.photo{
+    max-width: 85%;
+    box-shadow: 3px 4px 8px 5px #ccc;
+    border-radius: 25px;
+}
+
+.photo-wrap > p {
+    font:2.2em 方正姚体;
+    color:#666;
+}
+
+@media screen and (max-height: 800px){
+    .photo{
+        max-height: 400px;
+    }
+}
+@media screen and (min-height: 801px){
+    .photo{
+        max-height: 700px;
+    }
+}
