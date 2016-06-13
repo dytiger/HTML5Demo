@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单校验</title>
+    <style>
+        body {
+            background: #eee;
+        }
+
+        .container {
+            width: 40%;
+            margin: 5em 30%;
+        }
+
+        h1 {
+            text-align: center;
+            font: 3em 方正姚体;
+            text-shadow: 3px 2px 2px #999;
+        }
+
+        form {
+            padding: 1.5em 5em;
+            border: 6px double #ccc;
+            border-radius: 15px;
+            box-shadow: 3px 2px 2px 3px #999;
+        }
+
+        form > div {
+            padding: 1.5em 0;
+        }
+
+        label {
+            width: 20%;
+            float: left;
+        }
+
+        .input-group {
+            width: 80%;
+            float: right;
+        }
+
+        .button-group {
+            text-align: center;
+        }
+
+        .input-title {
+            font: 1.3em 方正姚体;
+            text-align: right;
+        }
+
+        input[placeholder], select {
+            padding: 0 1em;
+            font-size: 1.0em;
+            height: 2.2em;
+            border-style: none;
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        input[placeholder]:focus, select:focus {
+            box-shadow: 0px 0px 10px 1px cornflowerblue;
+            /*outline: none;*/
+        }
+
+        select {
+            width: 50%;
+        }
+
+        input[type='checkbox'], input[type='radio'] {
+            width: 1.2em;
+            height: 1.2em;
+        }
+
+        button {
+            width: 10%;
+            height: 30px;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>表单校验</h1>
+    <form id="user-info-form" action="target.html" method="post">
+        <div>
+            <label class="input-title">用户名：</label>
+            <div class="input-group">
+                <input id="xm" name="xm" placeholder="用户名"/>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">密码：</label>
+            <div class="input-group">
+                <input id="pwd" name="pwd" type="password" placeholder="密码"/>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">确认密码：</label>
+            <div class="input-group">
+                <input id="cpwd" type="password" placeholder="确认密码"/>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">年龄：</label>
+            <div class="input-group">
+                <input id="age" name="age" type="number" placeholder="年龄"/>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">性别：</label>
+            <div class="input-group">
+                <label><input name="gender" value="1" type="radio"/>男</label>
+                <label><input name="gender" value="2" type="radio"/>女</label>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">学历：</label>
+            <div class="input-group">
+                <select id="xl" name="xl">
+                    <option value="">请选择</option>
+                    <option value="1">初中</option>
+                    <option value="2">高中</option>
+                    <option value="3">大学</option>
+                    <option value="4">硕士</option>
+                    <option value="5">博士</option>
+                </select>
+            </div>
+        </div>
+        <div>
+            <label class="input-title">爱好：</label>
+            <div class="input-group">
+                <label><input name="ah" value="1" type="checkbox"/>文学</label>
+                <label><input name="ah" value="2" type="checkbox"/>美术</label>
+                <label><input name="ah" value="3" type="checkbox"/>体育</label>
+                <label><input name="ah" value="4" type="checkbox"/>电玩</label>
+                <label><input name="ah" value="5" type="checkbox"/>旅行</label>
+                <label><input name="ah" value="6" type="checkbox"/>影视</label>
+                <label><input name="ah" value="7" type="checkbox"/>音乐</label>
+            </div>
+        </div>
+        <div class="button-group">
+            <button id="submit-btn">提交</button>
+            <button type="reset">重置</button>
+        </div>
+    </form>
+</div>
+<script>
+    function getById(id){
+        return document.getElementById(id);
+    }
+
+    function isEmpty(id){
+        var element = getById(id);
+        var value = element.value;
+        if(value==''){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function isInRange(id,min,max) {
+        var element = getById(id);
+        var value = element.value;
+        if(value>=min&&value<=max){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function isLengthInRange(id,min,max){
+        var element = getById(id);
+        var length = element.value.length;
+        if(length>=min&&length<=max){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function isEquals(id1,id2){
+        var e1 = getById(id1);
+        var e2 = getById(id2);
+        return e1.value===e2.value;
+    }
+
+    function atLeastChecked(name,least){
+        var elementCount = document.querySelectorAll('input[name="'+name+'"]:checked').length;
+        if(elementCount>=least){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    function validateForm() {
+        if (isEmpty('xm')) {
+            alert('请输入用户名！');
+            return false;
+        }
+
+        if (!isLengthInRange('pwd',6,16)) {
+            alert('密码长度应该在6到16个字符之间');
+            return false;
+        }
+
+        if (!isEquals('pwd','cpwd')) {
+            alert('密码与确认密码不符');
+            return false;
+        }
+
+        if (isEmpty('age')) {
+            alert('请输入年龄！');
+            return false;
+        }
+
+        if (!isInRange('age',0,120)) {
+            alert('年龄的范围应该在0到120之间');
+            return false;
+        }
+
+        if (isEmpty('xl')) {
+            alert('请选择学历！');
+            return false;
+        }
+
+        if (!atLeastChecked('gender',1)) {
+            alert('请选择性别');
+            return false;
+        }
+
+        if (!atLeastChecked('ah',2)) {
+            alert('请至少选择两项爱好');
+            return false;
+        }
+
+        return true;
+    }
+
+    document.getElementById('submit-btn').onclick = validateForm;
+    // 添加事件
+    // document.getElementById('submit-btn').addEventListener('click',validateForm);
+    // 移除事件
+    // document.getElementById('submit-btn').removeEventListener('click',validateForm);
+</script>
+</body>
+</html>
